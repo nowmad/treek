@@ -12,6 +12,11 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
+gem "paperclip", "~> 5.0.0"
+
+gem "twitter-bootstrap-rails"
+gem 'font-awesome-rails'
+
 group :development, :test do
   # Call 'byebug' anywhere in the code to stop execution and get a debugger console
   gem 'byebug', platform: :mri
