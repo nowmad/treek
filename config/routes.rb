@@ -1,6 +1,6 @@
 Rails.application.routes.draw do
   resources :items
-  get 'items/search/:term' => 'items#search', :as => :item_search # item_search_path(:term => tag.name)
+  get 'items/search/*term' => 'items#search', :as => :item_search # item_search_path(:term => tag.name)
   get 'pages/about'
 
   root 'items#index'

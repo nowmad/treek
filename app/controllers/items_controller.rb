@@ -9,7 +9,7 @@ class ItemsController < ApplicationController
   end
 
   def search
-    @items = Item.tagged_with(params[:term])
+    @items = Item.tagged_with(params[:term].split('/'))
     @tags = Item.tag_counts_on(:tags)
     render :action => :index
   end
