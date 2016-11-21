@@ -8,6 +8,12 @@ class ItemsController < ApplicationController
     @tags = Item.tag_counts_on(:tags)
   end
 
+  def search
+    @items = Item.tagged_with(params[:term])
+    @tags = Item.tag_counts_on(:tags)
+    render :action => :index
+  end
+
   # GET /items/1
   # GET /items/1.json
   def show
