@@ -12,7 +12,7 @@
     <p><%= @item.reference %></p>
     <o>
       <% @item.tags.each do |tag| %>
-        <%= link_to tag.name, "#" %>
+        <%= link_to tag.name, item_search_path(:term => tag.name) %>
       <% end %>
     </p>
   </div>
