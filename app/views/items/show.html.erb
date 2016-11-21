@@ -10,7 +10,11 @@
     <h3><%= @item.title %></h3>
     <p><%= @item.description %></p>
     <p><%= @item.reference %></p>
-
+    <o>
+      <% @item.tags.each do |tag| %>
+        <%= link_to tag.name, "#" %>
+      <% end %>
+    </p>
   </div>
 </div>
 

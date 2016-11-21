@@ -5,6 +5,7 @@ class ItemsController < ApplicationController
   # GET /items.json
   def index
     @items = Item.all
+    @tags = Item.tag_counts_on(:tags)
   end
 
   # GET /items/1
@@ -69,6 +70,6 @@ class ItemsController < ApplicationController
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def item_params
-      params.require(:item).permit(:title, :description, :image, :reference)
+      params.require(:item).permit(:title, :description, :image, :reference, :tag_list)
     end
 end
