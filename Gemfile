@@ -13,7 +13,7 @@ gem 'jbuilder', '~> 2.5'
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
 gem 'paperclip'
-gem 'aws-sdk', '~> 2.3'
+gem 'aws-sdk', '< 2.0'
 
 gem 'bootstrap-sass', '~> 3.3.6'
 gem 'font-awesome-rails'
