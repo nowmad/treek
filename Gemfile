@@ -12,7 +12,6 @@ gem 'turbolinks', '~> 5'
 gem 'jbuilder', '~> 2.5'
 gem 'rails_12factor', group: :production
 gem 'pg', group: :production
-
 gem 'paperclip'
 gem 'aws-sdk', '~> 2.3'
 
