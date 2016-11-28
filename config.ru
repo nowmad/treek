@@ -3,7 +3,7 @@
 require_relative 'config/environment'
 
 use Rack::Auth::Basic, "Restricted Area" do |username, password|
-  [username, password] == ['admin', 'admin']
+  [username, password] == [ENV['USER_NAME'], ENV['PASSWORD']]
 end
 
 run Rails.application
