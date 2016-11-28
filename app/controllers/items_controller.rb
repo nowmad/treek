@@ -48,7 +48,7 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1.json
   def update
     respond_to do |format|
-      if @item.update(item_params)
+      if @item.update_attributes(item_params)
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @item }
       else
