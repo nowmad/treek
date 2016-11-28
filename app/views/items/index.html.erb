@@ -4,7 +4,9 @@
   <% @items.each do |item| %>
     <div class="col-md-3">
       <div class="thumbnail">
-
+        <div class="thumbnail">
+          <%= image_tag @item.image.url %>
+        </div>
         <div class="caption">
           <h3><%= item.title %></h3>
           <p><%= item.description %></p>
