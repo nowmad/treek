@@ -16,6 +16,8 @@ Rails.application.configure do
   config.log_formatter = ::Logger::Formatter.new
 
   config.paperclip_defaults = {
+    url: :s3_domain_url,
+    s3_host_name: "s3.ap-southeast-2.amazonaws.com",
     storage: :s3,
     s3_credentials: {
       bucket: ENV['AWS_BUCKET_ID'],
