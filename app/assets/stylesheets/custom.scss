@@ -1,22 +1,23 @@
 @import "bootstrap";
 @import url('https://fonts.googleapis.com/css?family=Exo+2');
+
 body {
-  background-color: #F1F2D8;
+  background-color: #ECEFF1;
   color: #333333;
   font-family: Arial, Helvetica, sans-serif;
 }
 
 .navbar-default {
-  background-color: #BFBD9F;
+  background-color: #37474F;
 }
 
 .navbar-default .navbar-brand {
   // font-family: 'Merriweather', 'Source Sans Pro', sans-serif;
   font-family: 'Exo 2', sans-serif;
   font-weight: 400;
-  font-size: 40px;
+  font-size: 35px;
   font-weight: bold;
-  color: #FFFFFF;
+  color: #ECEFF1;
 }
 
 .center {
