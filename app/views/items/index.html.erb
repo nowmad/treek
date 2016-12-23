@@ -1,5 +1,12 @@
 <p id="notice"><%= notice %></p>
 
+<div class="span4">
+  <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+    <%= link_to tag.name, item_search_path(:term => tag.name), :class => css_class %>
+  <% end %>
+  <p>
+</div>
+
 <div class="center">
   <div class="row">
     <div class="span8">
@@ -20,12 +27,6 @@
         </div>
       </div>
     <% end %>
-    </div>
-    <div class="span4">
-      <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-        <%= link_to tag.name, item_search_path(:term => tag.name), :class => css_class %>
-      <% end %>
-    </div>
-  </div>
+
 </div>
 <%= link_to 'New Item', new_item_path, class: "btn btn-link" %>
