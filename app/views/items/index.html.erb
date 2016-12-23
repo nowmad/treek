@@ -1,28 +1,30 @@
 <p id="notice"><%= notice %></p>
 
-<div class="row">
-  <div class="span8">
-  <% @items.each do |item| %>
-    <div class="col-md-3">
-      <div class="thumbnail">
+<div class="center">
+  <div class="row">
+    <div class="span8">
+    <% @items.each do |item| %>
+      <div class="col-md-3">
         <div class="thumbnail">
-          <%= image_tag item.image.url %>
-        </div>
-        <div class="caption">
-          <h3><%= item.title %></h3>
-          <p><%= item.description %></p>
-          <%= link_to 'Show', item, class: "btn btn-link" %>
-          <%= link_to 'Edit', edit_item_path(item), class: "btn btn-link" %>
-          <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+          <div class="thumbnail">
+            <%= image_tag item.image.url %>
+          </div>
+          <div class="caption">
+            <h3><%= item.title %></h3>
+            <p><%= item.description %></p>
+            <%= link_to 'Show', item, class: "btn btn-link" %>
+            <%= link_to 'Edit', edit_item_path(item), class: "btn btn-link" %>
+            <%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' }, class: "btn btn-link" %>
+          </div>
         </div>
       </div>
-    </div>
-  <% end %>
-  </div>
-  <div class="span4">
-    <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
-      <%= link_to tag.name, item_search_path(:term => tag.name), :class => css_class %>
     <% end %>
+    </div>
+    <div class="span4">
+      <% tag_cloud(@tags, %w(css1 css2 css3 css4)) do |tag, css_class| %>
+        <%= link_to tag.name, item_search_path(:term => tag.name), :class => css_class %>
+      <% end %>
+    </div>
   </div>
 </div>
 <%= link_to 'New Item', new_item_path, class: "btn btn-link" %>
